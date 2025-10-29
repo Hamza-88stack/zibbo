@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Home1 from "../app/Group 15.png"
-import { Building2, Battery, Users, Award, ArrowRight,  Factory, Zap, Globe, Calendar, ChevronRight } from 'lucide-react';
-import {  Smartphone } from 'lucide-react';
+import { Building2, Battery, Users, Award, ArrowRight,} from 'lucide-react';
 import DynessAboutSection from './componenets/dynesssection';
 
 const SolarHeroSection: React.FC = () => {
