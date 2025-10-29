@@ -25,7 +25,7 @@ export default function ZibboWebsite() {
     ];
 
     // Global locations with real geographic coordinates (longitude, latitude)
-    const locations = [
+    const locations: { name: string; code: string; coordinates: [number, number]; company: string }[] = [
         { name: 'Pakistan', code: 'PK', coordinates: [69.3451, 30.3753], company: 'ZIBBO Pakistan PTE LTD.' },
         { name: 'United States', code: 'US', coordinates: [-95.7129, 37.0902], company: 'ZIBBO North America' },
         { name: 'Canada', code: 'CA', coordinates: [-106.3468, 56.1304], company: 'ZIBBO Canada' },

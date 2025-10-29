@@ -313,7 +313,7 @@ const HotSellingProducts = () => {
 
 
 const EnergyStorageSection =() => {
-  const [openSection, setOpenSection] = useState('residential');
+  const [openSection, setOpenSection] = useState<string | null>('residential');
 
   const sections = [
     {
