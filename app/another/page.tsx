@@ -12,10 +12,41 @@ import Product4 from "../../app/solaredge-energy-bank-battery_front-1500px-x-100
 import Global from "../WhatsApp Image 2025-10-24 at 9.31.57 PM 1.png"
 import Chip from "../Untitled-design-18-768x768 1.png"
 import BhareFan from "../Group 1000005100-Photoroom.png"
+import Cert1 from "../p2025021717225247f8b.webp"
+import Cert2 from "../p20250217172252428ec.webp"
+import Cert3 from "../p20250217172251b7e6a.webp"
+import Cert4 from "../p2025021717225156cb1.webp"
+import Cert5 from "../p2025021717225111093.webp"
+import Cert6 from "../p202502171722510c822.webp"
+import Cert7 from "../p20250217172250ee0e7.webp"
+import Cert8 from "../p20250217172250418da.webp"
+import Cert9 from "../p20250217172250417fe.webp"
+import Cert10 from "../p2025021717225013cbf.webp"
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 export default function ZibboWebsite() {
-    const [activeProduct, setActiveProduct] = useState(0);
+      const [activeProduct, setActiveProduct] = useState(0);
     const [activeLocation, setActiveLocation] = useState(0);
+    const [selectedCert, setSelectedCert] = useState<number | null>(null);
+    const [activeCertIndex, setActiveCertIndex] = useState(0);
+
+    const certificates = [
+        Cert1, Cert2, Cert3, Cert4, Cert5, Cert6, Cert7, Cert8, Cert9, Cert10
+    ];
+useEffect(() => {
+    const interval = setInterval(() => {
+        setActiveCertIndex((prev) => (prev + 1) % certificates.length);
+    }, 3000); // Rotate every 3 seconds
+
+    return () => clearInterval(interval);
+}, [certificates.length]);
+    const getVisibleCertificates = () => {
+        const visible = [];
+        for (let i = 0; i < 5; i++) {
+            const index = (activeCertIndex + i) % certificates.length;
+            visible.push({ cert: certificates[index], originalIndex: index });
+        }
+        return visible;
+    };
 
     const products = [
         { name: 'Grade A LiFePO4 Cell', capacity: '3.2V/280Ah', image: Product4 },
@@ -25,24 +56,24 @@ export default function ZibboWebsite() {
     ];
 
     // Global locations with real geographic coordinates (longitude, latitude)
-    const locations: { name: string; code: string; coordinates: [number, number]; company: string }[] = [
-        { name: 'Pakistan', code: 'PK', coordinates: [69.3451, 30.3753], company: 'ZIBBO Pakistan PTE LTD.' },
-        { name: 'United States', code: 'US', coordinates: [-95.7129, 37.0902], company: 'ZIBBO North America' },
-        { name: 'Canada', code: 'CA', coordinates: [-106.3468, 56.1304], company: 'ZIBBO Canada' },
-        { name: 'Mexico', code: 'MX', coordinates: [-102.5528, 23.6345], company: 'ZIBBO Mexico' },
-        { name: 'Brazil', code: 'BR', coordinates: [-51.9253, -14.2350], company: 'ZIBBO Brazil' },
-        { name: 'Europe', code: 'EU', coordinates: [10.4515, 51.1657], company: 'ZIBBO Europe' },
-        { name: 'Russia', code: 'RU', coordinates: [105.3188, 61.5240], company: 'ZIBBO Russia' },
-        { name: 'Kenya', code: 'KE', coordinates: [37.9062, -0.0236], company: 'ZIBBO Kenya' },
-        { name: 'South Africa', code: 'ZA', coordinates: [22.9375, -30.5595], company: 'ZIBBO South Africa' },
-        { name: 'China', code: 'CN', coordinates: [104.1954, 35.8617], company: 'ZIBBO China' },
-        { name: 'Japan', code: 'JP', coordinates: [138.2529, 36.2048], company: 'ZIBBO Japan' },
-        { name: 'South Korea', code: 'KR', coordinates: [127.7669, 35.9078], company: 'ZIBBO Korea' },
-        { name: 'Taiwan', code: 'TW', coordinates: [120.9605, 23.6978], company: 'ZIBBO Taiwan' },
-        { name: 'Thailand', code: 'TH', coordinates: [100.9925, 15.8700], company: 'ZIBBO Thailand' },
-        { name: 'Singapore', code: 'SG', coordinates: [103.8198, 1.3521], company: 'ZIBBO Singapore' },
-        { name: 'Australia', code: 'AU', coordinates: [133.7751, -25.2744], company: 'ZIBBO Australia' },
-        { name: 'New Zealand', code: 'NZ', coordinates: [174.8860, -40.9006], company: 'ZIBBO New Zealand' },
+    const locations: { name: string; code: string; flag: string; coordinates: [number, number]; company: string }[] = [
+        { name: 'Pakistan', code: 'PK', flag: '🇵🇰', coordinates: [69.3451, 30.3753], company: 'ZIBBO Pakistan PTE LTD.' },
+        { name: 'United States', code: 'US', flag: '🇺🇸', coordinates: [-95.7129, 37.0902], company: 'ZIBBO North America' },
+        { name: 'Canada', code: 'CA', flag: '🇨🇦', coordinates: [-106.3468, 56.1304], company: 'ZIBBO Canada' },
+        { name: 'Mexico', code: 'MX', flag: '🇲🇽', coordinates: [-102.5528, 23.6345], company: 'ZIBBO Mexico' },
+        { name: 'Brazil', code: 'BR', flag: '🇧🇷', coordinates: [-51.9253, -14.2350], company: 'ZIBBO Brazil' },
+        { name: 'Europe', code: 'EU', flag: '🇪🇺', coordinates: [10.4515, 51.1657], company: 'ZIBBO Europe' },
+        { name: 'Russia', code: 'RU', flag: '🇷🇺', coordinates: [105.3188, 61.5240], company: 'ZIBBO Russia' },
+        { name: 'Kenya', code: 'KE', flag: '🇰🇪', coordinates: [37.9062, -0.0236], company: 'ZIBBO Kenya' },
+        { name: 'South Africa', code: 'ZA', flag: '🇿🇦', coordinates: [22.9375, -30.5595], company: 'ZIBBO South Africa' },
+        { name: 'China', code: 'CN', flag: '🇨🇳', coordinates: [104.1954, 35.8617], company: 'ZIBBO China' },
+        { name: 'Japan', code: 'JP', flag: '🇯🇵', coordinates: [138.2529, 36.2048], company: 'ZIBBO Japan' },
+        { name: 'South Korea', code: 'KR', flag: '🇰🇷', coordinates: [127.7669, 35.9078], company: 'ZIBBO Korea' },
+        { name: 'Taiwan', code: 'TW', flag: '🇹🇼', coordinates: [120.9605, 23.6978], company: 'ZIBBO Taiwan' },
+        { name: 'Thailand', code: 'TH', flag: '🇹🇭', coordinates: [100.9925, 15.8700], company: 'ZIBBO Thailand' },
+        { name: 'Singapore', code: 'SG', flag: '🇸🇬', coordinates: [103.8198, 1.3521], company: 'ZIBBO Singapore' },
+        { name: 'Australia', code: 'AU', flag: '🇦🇺', coordinates: [133.7751, -25.2744], company: 'ZIBBO Australia' },
+        { name: 'New Zealand', code: 'NZ', flag: '🇳🇿', coordinates: [174.8860, -40.9006], company: 'ZIBBO New Zealand' },
     ];
 
     // Cycle through locations every 3 seconds
@@ -397,7 +428,7 @@ export default function ZibboWebsite() {
                             >
                                 <div className="  border-2 border-[#3DE15C] shadow-lg shadow-[#3DE15C] rounded-xl p-4 flex items-center gap-3   min-w-[280px]">
                                     <div className="w-12 h-12 bg-[#3DE15C] rounded-full flex items-center justify-center flex-shrink-0">
-                                        <span className="text-2xl font-bold text-gray-900">{locations[activeLocation].code}</span>
+                                        <span className="text-2xl font-bold text-gray-900">{locations[activeLocation].flag}</span>
                                     </div>
                                     <div className="text-left">
                                         <div className="text-white font-bold text-lg">{locations[activeLocation].name}</div>
@@ -567,6 +598,64 @@ export default function ZibboWebsite() {
                     </div>
                 </div>
             </section>
+
+            {/* Our Honor Section */}
+            <section className="relative bg-white py-20 px-6">
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="text-5xl font-bold text-center mb-16 text-black">Our Honor</h2>
+                    
+                    {/* Certificates Grid */}
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
+                        {getVisibleCertificates().map((certItem, index) => (
+                            <div
+                                key={index}
+                                className="cursor-pointer transform transition hover:scale-105 hover:shadow-2xl rounded-lg overflow-hidden bg-white border-2 border-gray-200"
+                                onClick={() => setSelectedCert(certItem.originalIndex)}
+                            >
+                                <Image
+                                    src={certItem.cert}
+                                    alt={`Certificate ${certItem.originalIndex + 1}`}
+                                    className="w-full h-auto object-contain"
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Pagination Dots */}
+                    <div className="flex justify-center gap-2">
+                        {certificates.map((_, index) => (
+                            <div
+                                key={index}
+                                className={`w-3 h-3 rounded-full transition ${
+                                    index >= activeCertIndex && index < activeCertIndex + 5 ? 'bg-[#3FE25B]' : 'bg-gray-300'
+                                }`}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Modal for Full-Size View */}
+            {selectedCert !== null && (
+                <div
+                    className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
+                    onClick={() => setSelectedCert(null)}
+                >
+                    <button
+                        className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 transition"
+                        onClick={() => setSelectedCert(null)}
+                    >
+                        ×
+                    </button>
+                    <div className="relative max-w-5xl max-h-[90vh] overflow-auto">
+                        <Image
+                            src={certificates[selectedCert]}
+                            alt={`Certificate ${selectedCert + 1}`}
+                            className="w-full h-[500px] object-contain"
+                        />
+                    </div>
+                </div>
+            )}
 
             {/* Footer */}
             <footer className="relative bg-gray-900 border-t border-gray-800 py-12 px-6">
