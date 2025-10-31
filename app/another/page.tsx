@@ -24,7 +24,7 @@ import Cert9 from "../p20250217172250417fe.webp"
 import Cert10 from "../p2025021717225013cbf.webp"
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 export default function ZibboWebsite() {
-      const [activeProduct, setActiveProduct] = useState(0);
+    const [activeProduct, setActiveProduct] = useState(0);
     const [activeLocation, setActiveLocation] = useState(0);
     const [selectedCert, setSelectedCert] = useState<number | null>(null);
     const [activeCertIndex, setActiveCertIndex] = useState(0);
@@ -32,13 +32,13 @@ export default function ZibboWebsite() {
     const certificates = [
         Cert1, Cert2, Cert3, Cert4, Cert5, Cert6, Cert7, Cert8, Cert9, Cert10
     ];
-useEffect(() => {
-    const interval = setInterval(() => {
-        setActiveCertIndex((prev) => (prev + 1) % certificates.length);
-    }, 3000); // Rotate every 3 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveCertIndex((prev) => (prev + 1) % certificates.length);
+        }, 3000); // Rotate every 3 seconds
 
-    return () => clearInterval(interval);
-}, [certificates.length]);
+        return () => clearInterval(interval);
+    }, [certificates.length]);
     const getVisibleCertificates = () => {
         const visible = [];
         for (let i = 0; i < 5; i++) {
@@ -155,7 +155,7 @@ useEffect(() => {
                         src={Green}
                         className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/50"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
                 </div>
 
                 <div className="relative z-10 max-w-6xl mx-auto">
@@ -220,7 +220,7 @@ useEffect(() => {
             </section>
 
             {/* Solutions Section */}
-            <section className="relative min-h-screen flex bg-white items-center justify-center py-20 px-6">
+            <section className="relative min-h-screen flex bg-white items-center justify-center py-32 px-6">
                 <div className="absolute inset-0 bg-white"></div>
                 <div className="absolute inset-0">
                     <Image
@@ -231,10 +231,10 @@ useEffect(() => {
                 </div>
 
                 <div className="relative z-10 max-w-6xl mx-auto">
-                    <h2 className="text-5xl font-bold text-center mb-4 text-black">
+                    <h2 className="text-4xl font-bold text-center mb-4 text-black">
                         Reliable and Smart Energy Storage for a
                     </h2>
-                    <h3 className="text-5xl font-bold text-center mb-16 text-black">
+                    <h3 className="text-4xl font-bold text-center mb-24 text-black">
                         Sustainable Tomorrow
                     </h3>
 
@@ -254,8 +254,8 @@ useEffect(() => {
                                         </defs>
                                     </svg>
                                 </div>
-                                <h4 className="text-3xl font-bold mb-3 text-[#333333]">Residential Energy Storage Solution</h4>
-                                <p className="text-black text-lg">
+                                <h4 className="text-2xl font-bold mb-3 text-[#333333]">Residential Energy Storage Solution</h4>
+                                <p className="text-black text-md">
                                     Zibbo's Home Energy Storage Keeps Your Appliances Running 24/7, Saves On Electricity Bills, And Protects
                                     You From Unexpected Outages Ensuring Worry-Free Power For Your Family.
                                 </p>
@@ -291,8 +291,8 @@ useEffect(() => {
                                         </defs>
                                     </svg>
                                 </div>
-                                <h4 className="text-3xl font-bold mb-3 text-[#333333]">C&I Energy Storage Solution</h4>
-                                <p className="text-black text-lg">
+                                <h4 className="text-2xl font-bold mb-3 text-[#333333]">C&I Energy Storage Solution</h4>
+                                <p className="text-black text-md">
                                     Our Commercial And Industrial Storage Solutions Deliver Safe, Flexible, And Efficient Energy
                                     Management, Helping Businesses Lower Costs And Run Without Disruptions.
                                 </p>
@@ -310,15 +310,14 @@ useEffect(() => {
 
             {/* Products Section */}
             <section className="relative min-h-screen flex items-center justify-center py-20 px-6">
-                <div className="absolute inset-0">
+                 <div className="absolute inset-0">
                     <Image
                         alt="Background"
                         src={Green}
                         className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/50"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
                 </div>
-
                 <div className="relative z-10 max-w-7xl mx-auto">
                     <h2 className="text-5xl font-bold text-center mb-16">OUR PRODUCTS</h2>
 
@@ -336,8 +335,8 @@ useEffect(() => {
                                             alt={product.name}
                                             className="w-full h-full object-contain p-4"
                                         />
-                                        <div className="absolute bottom-3 right-3 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                                            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <div className="absolute bottom-0 right-0 w-10 h-10 bg-white rounded-full flex items-center justify-center transition">
+                                            <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                             </svg>
                                         </div>
@@ -482,7 +481,7 @@ useEffect(() => {
 
                     {/* Feature Cards */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div className="relative backdrop-blur-md rounded-3xl p-8 hover:shadow-2xl transition shadow-xl transform hover:scale-105 bg-gradient-to-r from-[#07B4E3] to-[#4CC420] p-[4px]">
+                        <div className="relative backdrop-blur-md p-8 hover:shadow-2xl transition shadow-xl transform hover:scale-105 bg-gradient-to-r from-[#07B4E3] to-[#4CC420] p-[4px]">
                             <div className="bg-white rounded-3xl p-8 h-full">
                                 <div className="w-24 h-24 bg-gray-200 rounded-full mb-4 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -495,15 +494,15 @@ useEffect(() => {
                                         </defs>
                                     </svg>
                                 </div>
-                                <h4 className="text-3xl font-bold mb-3 text-[#333333]">Residential Energy Storage Solution</h4>
-                                <p className="text-black text-lg">
+                                <h4 className="text-2xl font-bold mb-3 text-[#333333]">Residential Energy Storage Solution</h4>
+                                <p className="text-black text-md">
                                     Zibbo's Home Energy Storage Keeps Your Appliances Running 24/7, Saves On Electricity Bills, And Protects
                                     You From Unexpected Outages Ensuring Worry-Free Power For Your Family.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="relative backdrop-blur-md rounded-3xl p-8 hover:shadow-2xl transition shadow-xl transform hover:scale-105 bg-gradient-to-r from-[#07B4E3] to-[#4CC420] p-[4px]">
+                        <div className="relative backdrop-blur-md p-8 hover:shadow-2xl transition shadow-xl transform hover:scale-105 bg-gradient-to-r from-[#07B4E3] to-[#4CC420] p-[4px]">
                             <div className="bg-white rounded-3xl p-8 h-full">
                                 <div className="w-24 h-24 bg-gray-200 rounded-full mb-4 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="45" height="46" viewBox="0 0 45 46" fill="none">
@@ -516,15 +515,15 @@ useEffect(() => {
                                         </defs>
                                     </svg>
                                 </div>
-                                <h4 className="text-3xl font-bold mb-3 text-[#333333]">Residential Energy Storage Solution</h4>
-                                <p className="text-black text-lg">
+                                <h4 className="text-2xl font-bold mb-3 text-[#333333]">Residential Energy Storage Solution</h4>
+                                <p className="text-black text-md">
                                     Zibbo's Home Energy Storage Keeps Your Appliances Running 24/7, Saves On Electricity Bills, And Protects
                                     You From Unexpected Outages Ensuring Worry-Free Power For Your Family.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="relative backdrop-blur-md rounded-3xl p-8 hover:shadow-2xl transition shadow-xl transform hover:scale-105 bg-gradient-to-r from-[#07B4E3] to-[#4CC420] p-[4px]">
+                        <div className="relative backdrop-blur-md p-8 hover:shadow-2xl transition shadow-xl transform hover:scale-105 bg-gradient-to-r from-[#07B4E3] to-[#4CC420] p-[4px]">
                             <div className="bg-white rounded-3xl p-8 h-full">
                                 <div className="w-24 h-24 bg-gray-200 rounded-full mb-4 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="38" height="58" viewBox="0 0 38 58" fill="none">
@@ -537,8 +536,8 @@ useEffect(() => {
                                         </defs>
                                     </svg>
                                 </div>
-                                <h4 className="text-3xl font-bold mb-3 text-[#333333]">Residential Energy Storage Solution</h4>
-                                <p className="text-black text-lg">
+                                <h4 className="text-2xl font-bold mb-3 text-[#333333]">Residential Energy Storage Solution</h4>
+                                <p className="text-black text-md">
                                     Zibbo's Home Energy Storage Keeps Your Appliances Running 24/7, Saves On Electricity Bills, And Protects
                                     You From Unexpected Outages Ensuring Worry-Free Power For Your Family.
                                 </p>
@@ -546,7 +545,7 @@ useEffect(() => {
                         </div>
 
 
-                        <div className="relative backdrop-blur-md rounded-3xl p-8 hover:shadow-2xl transition shadow-xl transform hover:scale-105 bg-gradient-to-r from-[#07B4E3] to-[#4CC420] p-[4px]">
+                        <div className="relative backdrop-blur-md p-8 hover:shadow-2xl transition shadow-xl transform hover:scale-105 bg-gradient-to-r from-[#07B4E3] to-[#4CC420] p-[4px]">
                             <div className="bg-white rounded-3xl p-8 h-full">
                                 <div className="w-24 h-24 bg-gray-200 rounded-full mb-4 flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="47" height="44" viewBox="0 0 47 44" fill="none">
@@ -559,8 +558,8 @@ useEffect(() => {
                                         </defs>
                                     </svg>
                                 </div>
-                                <h4 className="text-3xl font-bold mb-3 text-[#333333]">C&I Energy Storage Solution</h4>
-                                <p className="text-black text-lg">
+                                <h4 className="text-2xl font-bold mb-3 text-[#333333]">C&I Energy Storage Solution</h4>
+                                <p className="text-black text-md">
                                     Our Commercial And Industrial Storage Solutions Deliver Safe, Flexible, And Efficient Energy
                                     Management, Helping Businesses Lower Costs And Run Without Disruptions.
                                 </p>
@@ -603,7 +602,7 @@ useEffect(() => {
             <section className="relative bg-white py-20 px-6">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-5xl font-bold text-center mb-16 text-black">Our Honor</h2>
-                    
+
                     {/* Certificates Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
                         {getVisibleCertificates().map((certItem, index) => (
@@ -626,9 +625,8 @@ useEffect(() => {
                         {certificates.map((_, index) => (
                             <div
                                 key={index}
-                                className={`w-3 h-3 rounded-full transition ${
-                                    index >= activeCertIndex && index < activeCertIndex + 5 ? 'bg-[#3FE25B]' : 'bg-gray-300'
-                                }`}
+                                className={`w-3 h-3 rounded-full transition ${index >= activeCertIndex && index < activeCertIndex + 5 ? 'bg-[#3FE25B]' : 'bg-gray-300'
+                                    }`}
                             />
                         ))}
                     </div>
