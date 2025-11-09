@@ -1,13 +1,16 @@
-  import React from 'react';
+  'use client'
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <nav className="fixed top-0 w-full z-50 bg-black/10 backdrop-blur-md">
-            <div className="max-w-7xl mx-auto px-6 py-4">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="84" height="52" viewBox="0 0 84 52" fill="none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="37" viewBox="0 0 84 52" fill="none" className="sm:w-[84px] sm:h-[52px]">
                             <circle cx="26" cy="26" r="26" fill="#2C8FFD" />
                             <circle cx="57.9092" cy="26" r="26" fill="#3FE25B" />
                             <path d="M68.5884 34.6886C63.5258 34.6886 60.3472 31.3829 60.3472 26.066C60.3472 20.7491 63.5373 17.4318 68.5884 17.4318C73.6394 17.4318 76.818 20.7491 76.818 26.066C76.818 31.3829 73.6394 34.6886 68.5884 34.6886ZM68.5884 31.2442C70.9579 31.2442 72.5067 29.233 72.5067 26.066C72.5067 22.8874 70.9579 20.8762 68.5884 20.8762C66.2189 20.8762 64.67 22.8874 64.67 26.066C64.67 29.233 66.2073 31.2442 68.5884 31.2442Z" fill="white" />
@@ -18,6 +21,8 @@ export default function Header() {
                             <circle cx="25.0406" cy="19.4847" r="2.05284" fill="white" />
                         </svg>
                     </Link>
+
+                    {/* Desktop Menu */}
                     <div className="hidden md:flex items-center bg-white text-black p-2 rounded-full px-5 space-x-10">
                         <Link href="/products" className="hover:text-blue-400 transition font-bold text-blue-500">Product</Link>
                         <Link href="/case-studies" className="hover:text-blue-400 transition">Case Studies</Link>
@@ -28,7 +33,75 @@ export default function Header() {
                             Contact Us
                         </button>
                     </div>
+
+                    {/* Hamburger Menu Button */}
+                    <button 
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition"
+                        aria-label="Toggle menu"
+                    >
+                        {isMenuOpen ? (
+                            // Close Icon
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        ) : (
+                            // Hamburger Icon
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        )}
+                    </button>
                 </div>
+
+                {/* Mobile Menu */}
+                {isMenuOpen && (
+                    <div className="md:hidden mt-4 pb-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-lg">
+                        <div className="flex flex-col space-y-3 p-4">
+                            <Link 
+                                href="/products" 
+                                className="text-black hover:text-blue-400 transition py-2 px-4 rounded-lg hover:bg-gray-100 font-semibold"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Product
+                            </Link>
+                            <Link 
+                                href="/case-studies" 
+                                className="text-black hover:text-blue-400 transition py-2 px-4 rounded-lg hover:bg-gray-100"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Case Studies
+                            </Link>
+                            <Link 
+                                href="/news" 
+                                className="text-black hover:text-blue-400 transition py-2 px-4 rounded-lg hover:bg-gray-100"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                News
+                            </Link>
+                            <Link 
+                                href="/blog" 
+                                className="text-black hover:text-blue-400 transition py-2 px-4 rounded-lg hover:bg-gray-100"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Blog
+                            </Link>
+                            <Link 
+                                href="/about" 
+                                className="text-black hover:text-blue-400 transition py-2 px-4 rounded-lg hover:bg-gray-100"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                About Us
+                            </Link>
+                            <button 
+                                className="bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition text-center"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Contact Us
+                            </button>
+                        </div>
+                    </div>
+                )}
             </div>
         </nav>
     );
