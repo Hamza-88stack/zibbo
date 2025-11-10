@@ -5,6 +5,8 @@ import { Flag } from 'lucide-react';
 import Image from 'next/image';
 import BGIMAGE from '../wind-turbines-open-field-cloudy-sky (1) 1.png'
 import Global from "../WhatsApp Image 2025-10-24 at 9.31.57 PM 1.png"
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
@@ -34,37 +36,10 @@ export default function ContactPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Navigation */}
-            <nav className="fixed top-0 w-full z-50 bg-black/10 backdrop-blur-md">
-                <div className="max-w-7xl mx-auto px-6 py-4">
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="84" height="52" viewBox="0 0 84 52" fill="none">
-                                <circle cx="26" cy="26" r="26" fill="#2C8FFD" />
-                                <circle cx="57.9092" cy="26" r="26" fill="#3FE25B" />
-                                <path d="M68.5884 34.6886C63.5258 34.6886 60.3472 31.3829 60.3472 26.066C60.3472 20.7491 63.5373 17.4318 68.5884 17.4318C73.6394 17.4318 76.818 20.7491 76.818 26.066C76.818 31.3829 73.6394 34.6886 68.5884 34.6886ZM68.5884 31.2442C70.9579 31.2442 72.5067 29.233 72.5067 26.066C72.5067 22.8874 70.9579 20.8762 68.5884 20.8762C66.2189 20.8762 64.67 22.8874 64.67 26.066C64.67 29.233 66.2073 31.2442 68.5884 31.2442Z" fill="white" />
-                                <path d="M47.3553 34.3997C46.0145 34.3997 45.2285 33.5906 45.2285 32.1804V19.94C45.2285 18.5299 46.0145 17.7208 47.3553 17.7208H52.9843C56.2669 17.7208 58.2434 19.3043 58.2434 21.8818C58.2434 23.7543 56.8332 25.2453 54.9839 25.4996V25.5921C57.2378 25.6961 59.0178 27.3721 59.0178 29.5913C59.0178 32.5156 56.7639 34.3997 53.1923 34.3997H47.3553ZM49.4705 24.5172H51.655C53.1923 24.5172 54.117 23.789 54.117 22.5869C54.117 21.4195 53.2848 20.726 51.8631 20.726H49.4705V24.5172ZM49.4705 31.3945H51.9902C53.7356 31.3945 54.7065 30.6316 54.7065 29.2215C54.7065 27.8576 53.7124 27.0947 51.9671 27.0947H49.4705V31.3945Z" fill="white" />
-                                <path d="M31.7747 34.3997C30.4339 34.3997 29.6479 33.5906 29.6479 32.1804V19.94C29.6479 18.5299 30.4339 17.7208 31.7747 17.7208H37.4037C40.6863 17.7208 42.6628 19.3043 42.6628 21.8818C42.6628 23.7543 41.2527 25.2453 39.4033 25.4996V25.5921C41.6572 25.6961 43.4372 27.3721 43.4372 29.5913C43.4372 32.5156 41.1833 34.3997 37.6117 34.3997H31.7747ZM33.8899 24.5172H36.0745C37.6117 24.5172 38.5364 23.789 38.5364 22.5869C38.5364 21.4195 37.7042 20.726 36.2825 20.726H33.8899V24.5172ZM33.8899 31.3945H36.4097C38.155 31.3945 39.1259 30.6316 39.1259 29.2215C39.1259 27.8576 38.1319 27.0947 36.3865 27.0947H33.8899V31.3945Z" fill="white" />
-                                <path d="M25.0462 34.6756C23.7485 34.6756 22.9878 34.1422 22.9878 33.199V24.6564C22.9878 23.7132 23.7485 23.1798 25.0462 23.1798C26.3439 23.1798 27.0935 23.7132 27.0935 24.6564V33.199C27.0935 34.1422 26.3439 34.6756 25.0462 34.6756Z" fill="white" />
-                                <path d="M9.58234 34.3997C8.31091 34.3997 7.46714 33.6599 7.46714 32.5041C7.46714 31.9262 7.64052 31.4754 8.05662 30.9321L15.3963 21.2346V21.1421H9.27026C8.13753 21.1421 7.38623 20.5179 7.38623 19.4314C7.38623 18.3449 8.12597 17.7208 9.27026 17.7208H18.2512C19.5573 17.7208 20.378 18.4836 20.378 19.6973C20.378 20.3561 20.0774 20.7838 19.7538 21.223L12.4835 30.8859V30.9784H18.9678C20.1121 30.9784 20.8519 31.6025 20.8519 32.689C20.8519 33.7755 20.089 34.3997 18.9678 34.3997H9.58234Z" fill="white" />
-                                <circle cx="25.0406" cy="19.4847" r="2.05284" fill="white" />
-                            </svg>
-                        </div>
-                        <div className="hidden md:flex items-center bg-white text-black p-2 rounded-full px-5 space-x-10">
-                            <a href="/products" className="hover:text-blue-400 transition text-black">Products</a>
-                            <a href="/case-studies" className="hover:text-blue-400 transition text-black">Case Studies</a>
-                            <a href="/news" className="hover:text-blue-400 transition text-black">News</a>
-                            <a href="/blog" className="hover:text-blue-400 transition text-black">Blog</a>
-                            <a href="/about" className="hover:text-blue-400 transition text-black">About Us</a>
-                            <button className="bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white px-6 py-2 rounded-full font-semibold hover:opacity-90 transition">
-                                Contact Us
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <Header />
 
             {/* Hero Section */}
-            <section className="relative h-[400px] min0  overflow-hidden">
+            <section className="relative h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden">
                 <div className="absolute inset-0">
                     <Image
                         alt='Products Background'
@@ -73,24 +48,24 @@ export default function ContactPage() {
                         className="object-cover"
                         priority
                     />
-                    <div className="absolute inset-0 bg-black/40"></div>                </div>
+                    <div className="absolute inset-0 bg-black/40"></div>
+                </div>
 
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center px-4">
                     <div className="text-center text-white z-10">
-                        <h1 className="text-6xl font-bold mb-4">GET IN TOUCH</h1>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">GET IN TOUCH</h1>
                     </div>
                 </div>
             </section>
 
             {/* Contact Info Cards */}
-
-            <section className="bg-gray-100 py-16">
+            <section className="bg-gray-100 py-8 sm:py-12 md:py-16">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
                         {/* China Office */}
-                        <div className="relative">
+                        <div className="relative mt-8">
                             {/* Flag */}
-                            <div className="absolute -top-8 left-0">
+                            <div className="absolute -top-8 left-4 sm:left-0">
                                 <div className="  rounded-full flex items-center justify-center shadow-lg">
                                     <div className="relative w-12 h-12">
                                         {/* Chinese flag stars representation */}
@@ -118,58 +93,59 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-white border-2 border-[#DE2910] h-60 flex rounded-2xl p-8 pt-12 shadow-md">
+                            <div className="bg-white border-2 border-[#DE2910] min-h-[240px] flex rounded-2xl p-4 sm:p-6 md:p-8 pt-12 shadow-md">
                                 {/* Phone */}
-                                <div className="">
-                                    <div className="flex items-start space-x-4 mb-6">
-                                        <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <Phone className="w-5 h-5 text-gray-700" />
+                                <div className="w-full">
+                                    <div className="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
                                         </div>
                                         <div>
-                                            <p className="text-sm font-semibold text-gray-700 mb-1">Phone:</p>
-                                            <p className="text-gray-900 font-medium">+8618819760216</p>
-                                            <p className="text-gray-900 font-medium">+86-769-82960591</p>
+                                            <p className="text-xs sm:text-sm font-semibold text-gray-700 mb-1">Phone:</p>
+                                            <p className="text-sm sm:text-base text-gray-900 font-medium">+8618819760216</p>
+                                            <p className="text-sm sm:text-base text-gray-900 font-medium">+86-769-82960591</p>
                                         </div>
                                     </div>
 
                                     {/* Email */}
-                                    <div className="flex items-start space-x-4 mb-6">
-                                        <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <Mail className="w-5 h-5 text-gray-700" />
+                                    <div className="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
                                         </div>
                                         <div>
-                                            <p className="text-sm font-semibold text-gray-700 mb-1">Email:</p>
+                                            <p className="text-xs sm:text-sm font-semibold text-gray-700 mb-1">Email:</p>
                                             <a
                                                 href="mailto:alvin@zblpower.com"
-                                                className="text-gray-900 font-medium hover:text-blue-600 transition underline"
+                                                className="text-sm sm:text-base text-gray-900 font-medium hover:text-blue-600 transition underline break-all"
                                             >
                                                 alvin@zblpower.com
                                             </a>
                                         </div>
                                     </div>
-                                </div>
-                                {/* Address */}
-                                <div className="flex items-start space-x-4">
-                                    <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <MapPin className="w-5 h-5 text-gray-700" />
-                                    </div>
-                                    <div>
-                                        <p className="text-sm font-semibold text-gray-700 mb-1">Address</p>
-                                        <p className="text-gray-900 font-medium leading-relaxed">
-                                            Building 1, No.5 Weizai Road,<br />
-                                            Tianxin Village, Tangxia Town,<br />
-                                            Dongguan City, Guangdong<br />
-                                            Province, China
-                                        </p>
+
+                                    {/* Address */}
+                                    <div className="flex items-start space-x-3 sm:space-x-4">
+                                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
+                                        </div>
+                                        <div>
+                                            <p className="text-xs sm:text-sm font-semibold text-gray-700 mb-1">Address</p>
+                                            <p className="text-sm sm:text-base text-gray-900 font-medium leading-relaxed">
+                                                Building 1, No.5 Weizai Road,<br />
+                                                Tianxin Village, Tangxia Town,<br />
+                                                Dongguan City, Guangdong<br />
+                                                Province, China
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Pakistan Office */}
-                        <div className="relative">
+                        <div className="relative mt-8">
                             {/* Flag */}
-                            <div className="absolute -top-8 left-0">
+                            <div className="absolute -top-8 left-4 sm:left-0">
                                 <div className="  rounded-full flex items-center justify-center shadow-lg">
                                     <div className="relative w-12 h-12">
                                         {/* Pakistani flag representation */}
@@ -198,46 +174,47 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            <div className="bg-white border-2 border-[#3DE15C] h-60 flex rounded-2xl p-8 pt-12 shadow-md">
+                            <div className="bg-white border-2 border-[#3DE15C] min-h-[240px] flex rounded-2xl p-4 sm:p-6 md:p-8 pt-12 shadow-md">
                                 {/* Phone */}
-                                <div className="">
-                                    <div className="flex items-start space-x-4 mb-6">
-                                        <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <Phone className="w-5 h-5 text-gray-700" />
+                                <div className="w-full">
+                                    <div className="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
                                         </div>
                                         <div>
-                                            <p className="text-sm font-semibold text-gray-700 mb-1">Phone:</p>
-                                            <p className="text-gray-900 font-medium">03208889219</p>
+                                            <p className="text-xs sm:text-sm font-semibold text-gray-700 mb-1">Phone:</p>
+                                            <p className="text-sm sm:text-base text-gray-900 font-medium">03208889219</p>
                                         </div>
                                     </div>
 
                                     {/* Email */}
-                                    <div className="flex items-start space-x-4 mb-6">
-                                        <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <Mail className="w-5 h-5 text-gray-700" />
+                                    <div className="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
                                         </div>
                                         <div>
-                                            <p className="text-sm font-semibold text-gray-700 mb-1">Email:</p>
+                                            <p className="text-xs sm:text-sm font-semibold text-gray-700 mb-1">Email:</p>
                                             <a
                                                 href="mailto:sales@zibbopower.pk"
-                                                className="text-gray-900 font-medium hover:text-blue-600 transition underline"
+                                                className="text-sm sm:text-base text-gray-900 font-medium hover:text-blue-600 transition underline break-all"
                                             >
                                                 sales@zibbopower.pk
                                             </a>
                                         </div>
                                     </div>
 
-                                    {/* Address */}</div>
-                                <div className="flex items-start space-x-4">
-                                    <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <MapPin className="w-5 h-5 text-gray-700" />
-                                    </div>
-                                    <div>
-                                        <p className="text-sm font-semibold text-gray-700 mb-1">Address</p>
-                                        <p className="text-gray-900 font-medium leading-relaxed">
-                                            67-K Commercial Phase-1 Ghazi<br />
-                                            Road, DHA Lahore.
-                                        </p>
+                                    {/* Address */}
+                                    <div className="flex items-start space-x-3 sm:space-x-4">
+                                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
+                                        </div>
+                                        <div>
+                                            <p className="text-xs sm:text-sm font-semibold text-gray-700 mb-1">Address</p>
+                                            <p className="text-sm sm:text-base text-gray-900 font-medium leading-relaxed">
+                                                67-K Commercial Phase-1 Ghazi<br />
+                                                Road, DHA Lahore.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -247,20 +224,20 @@ export default function ContactPage() {
             </section>
 
             {/* Contact Form Section */}
-            <section className="py-16 bg-white">
+            <section className="py-8 sm:py-12 md:py-16 bg-white">
                 <div className="container mx-auto px-4 max-w-4xl">
-                    <div className="text-center mb-8">
-                        <h2 className="text-4xl font-bold text-black mb-4">Get Your Instant Energy Storage Quote Now</h2>
-                        <p className="text-gray-600 mb-2">Talk To Our Experts And Discover The Best Zibbo Battery Solution For Your Home,</p>
-                        <p className="text-gray-600 mb-2">Business, Or Solar System</p>
-                        <p className="text-gray-600">We'll Respond Quickly With Customized Recommendations And Pricing Details.</p>
+                    <div className="text-center mb-6 sm:mb-8">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-3 sm:mb-4">Get Your Instant Energy Storage Quote Now</h2>
+                        <p className="text-sm sm:text-base text-gray-600 mb-2">Talk To Our Experts And Discover The Best Zibbo Battery Solution For Your Home,</p>
+                        <p className="text-sm sm:text-base text-gray-600 mb-2">Business, Or Solar System</p>
+                        <p className="text-sm sm:text-base text-gray-600">We'll Respond Quickly With Customized Recommendations And Pricing Details.</p>
                     </div>
 
                     {/* Tab Buttons */}
-                    <div className="flex justify-center space-x-4 mb-8">
+                    <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
                         <button
                             onClick={() => setActiveTab('buy')}
-                            className={`px-6 py-2 rounded-full font-semibold transition ${activeTab === 'buy'
+                            className={`px-4 sm:px-6 py-2 text-sm sm:text-base rounded-full font-semibold transition ${activeTab === 'buy'
                                 ? 'bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white'
                                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                                 }`}
@@ -269,7 +246,7 @@ export default function ContactPage() {
                         </button>
                         <button
                             onClick={() => setActiveTab('partner')}
-                            className={`px-6 py-2 rounded-full font-semibold transition ${activeTab === 'partner'
+                            className={`px-4 sm:px-6 py-2 text-sm sm:text-base rounded-full font-semibold transition ${activeTab === 'partner'
                                 ? 'bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white'
                                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                                 }`}
@@ -278,7 +255,7 @@ export default function ContactPage() {
                         </button>
                         <button
                             onClick={() => setActiveTab('sales')}
-                            className={`px-6 py-2 rounded-full font-semibold transition ${activeTab === 'sales'
+                            className={`px-4 sm:px-6 py-2 text-sm sm:text-base rounded-full font-semibold transition ${activeTab === 'sales'
                                 ? 'bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white'
                                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                                 }`}
@@ -288,9 +265,9 @@ export default function ContactPage() {
                     </div>
 
                     {/* Form */}
-                    <div className="bg-gray-100 p-8 rounded-2xl shadow-lg">
-                        <div className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="bg-gray-100 p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg">
+                        <div className="space-y-4 sm:space-y-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
                                 <input
                                     type="text"
                                     name="name"
@@ -405,132 +382,7 @@ export default function ContactPage() {
             </section>
 
             {/* Footer */}
-            <footer className="bg-gray-800 relative  text-white py-16 px-6">
-                <div className="absolute inset-0">
-                    <Image
-                        alt="Background"
-                        src={Global}
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/90"></div>
-                </div>
-                <div className="max-w-7xl mx-auto relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-                        {/* About Zibbo */}
-                        <div className="grid grid-cols-4 col-span-4">
-                            <div className="lg:col-span-1">
-                                <h3 className="text-white font-semibold mb-4">About Zibbo</h3>
-                                <ul className="space-y-2 text-gray-300 text-sm">
-                                    <li><a href="#" className="hover:text-white transition">Company Profile</a></li>
-                                    <li><a href="#" className="hover:text-white transition">Brand House</a></li>
-                                    <li><a href="#" className="hover:text-white transition">R&D Innovation</a></li>
-                                    <li><a href="#" className="hover:text-white transition">Join Us</a></li>
-                                </ul>
-                            </div>
-
-                            {/* Product */}
-                            <div className="lg:col-span-1">
-                                <h3 className="text-white font-semibold mb-4">Product</h3>
-                                <ul className="space-y-2 text-gray-300 text-sm">
-                                    <li><a href="#" className="hover:text-white transition">Residential ESS</a></li>
-                                    <li><a href="#" className="hover:text-white transition">Commercial ESS</a></li>
-                                </ul>
-                            </div>
-
-                            {/* Cases */}
-                            <div className="lg:col-span-1">
-                                <h3 className="text-white font-semibold mb-4">Cases</h3>
-                                <ul className="space-y-2 text-gray-300 text-sm">
-                                    <li><a href="#" className="hover:text-white transition">Residential Cases</a></li>
-                                    <li><a href="#" className="hover:text-white transition">C&I Cases</a></li>
-                                </ul>
-                            </div>
-
-                            {/* Solutions */}
-                            <div className="lg:col-span-1">
-                                <h3 className="text-white font-semibold mb-4">Solutions</h3>
-                                <ul className="space-y-2 text-gray-300 text-sm">
-                                    <li><a href="#" className="hover:text-white transition">C&I Solutions</a></li>
-                                    <li><a href="#" className="hover:text-white transition">Residential Solutions</a></li>
-                                    <li><a href="#" className="hover:text-white transition">Centralised Solutions</a></li>
-                                </ul>
-                            </div>
-
-                            {/* Service & News */}
-                            <div className="lg:col-span-1">
-                                <h3 className="text-white font-semibold mb-4 mt-8">Service</h3>
-                                <ul className="space-y-2 text-gray-300 text-sm">
-                                    <li><a href="#" className="hover:text-white transition">Warranty Registration</a></li>
-                                    <li><a href="#" className="hover:text-white transition">Download Center</a></li>
-                                    <li><a href="#" className="hover:text-white transition">After-Sales</a></li>
-                                    <li><a href="#" className="hover:text-white transition">More Support</a></li>
-                                </ul>
-                            </div>
-                            <div className='lg:col-span-1'>
-                                <h3 className="text-white font-semibold mb-4 mt-8">NEWS & EVENTS</h3>
-                                <ul className="space-y-2 text-gray-300 text-sm">
-                                    <li><a href="#" className="hover:text-white transition">Company News</a></li>
-                                    <li><a href="#" className="hover:text-white transition">Exhibition News</a></li>
-                                    <li><a href="#" className="hover:text-white transition">Technology Blog</a></li>
-                                    <li><a href="#" className="hover:text-white transition">Events</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        {/* Newsletter & Contact */}
-                        <div className="lg:col-span-2">
-                            <div className="bg-gray-700 rounded-lg p-4 mb-6">
-                                <h3 className="text-white font-semibold mb-3">Subscribe To Our Newsletter</h3>
-                                <div className="flex">
-                                    <input
-                                        type="email"
-                                        placeholder="Enter your email"
-                                        className="flex-1 px-3 py-2 bg-gray-600 text-white placeholder-gray-400 rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    />
-                                    <button className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-r-md text-sm font-medium transition">
-                                        Subscribe
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div className="space-y-3">
-                                <h3 className="text-white font-semibold">Contact Us:</h3>
-                                <div className="text-gray-300 text-sm">
-                                    <p><span className="font-medium">Email:</span> Email@gmail.com</p>
-                                    <p><span className="font-medium">Sales Call:</span> 03208889719</p>
-                                    <p><span className="font-medium">Company Address:</span> Ghazi road Lhr</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Bottom Section */}
-                    <div className="border-t border-gray-700 mt-12 pt-8">
-                        <div className="flex flex-col md:flex-row justify-between items-center">
-                            <div className="flex items-center mb-4 md:mb-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="84" height="52" viewBox="0 0 84 52" fill="none" className="mr-3">
-                                    <circle cx="26" cy="26" r="26" fill="#2C8FFD" />
-                                    <circle cx="57.9092" cy="26" r="26" fill="#3FE25B" />
-                                    <path d="M68.5884 34.6886C63.5258 34.6886 60.3472 31.3829 60.3472 26.066C60.3472 20.7491 63.5373 17.4318 68.5884 17.4318C73.6394 17.4318 76.818 20.7491 76.818 26.066C76.818 31.3829 73.6394 34.6886 68.5884 34.6886ZM68.5884 31.2442C70.9579 31.2442 72.5067 29.233 72.5067 26.066C72.5067 22.8874 70.9579 20.8762 68.5884 20.8762C66.2189 20.8762 64.67 22.8874 64.67 26.066C64.67 29.233 66.2073 31.2442 68.5884 31.2442Z" fill="white" />
-                                    <path d="M47.3553 34.3997C46.0145 34.3997 45.2285 33.5906 45.2285 32.1804V19.94C45.2285 18.5299 46.0145 17.7208 47.3553 17.7208H52.9843C56.2669 17.7208 58.2434 19.3043 58.2434 21.8818C58.2434 23.7543 56.8332 25.2453 54.9839 25.4996V25.5921C57.2378 25.6961 59.0178 27.3721 59.0178 29.5913C59.0178 32.5156 56.7639 34.3997 53.1923 34.3997H47.3553ZM49.4705 24.5172H51.655C53.1923 24.5172 54.117 23.789 54.117 22.5869C54.117 21.4195 53.2848 20.726 51.8631 20.726H49.4705V24.5172ZM49.4705 31.3945H51.9902C53.7356 31.3945 54.7065 30.6316 54.7065 29.2215C54.7065 27.8576 53.7124 27.0947 51.9671 27.0947H49.4705V31.3945Z" fill="white" />
-                                    <path d="M31.7747 34.3997C30.4339 34.3997 29.6479 33.5906 29.6479 32.1804V19.94C29.6479 18.5299 30.4339 17.7208 31.7747 17.7208H37.4037C40.6863 17.7208 42.6628 19.3043 42.6628 21.8818C42.6628 23.7543 41.2527 25.2453 39.4033 25.4996V25.5921C41.6572 25.6961 43.4372 27.3721 43.4372 29.5913C43.4372 32.5156 41.1833 34.3997 37.6117 34.3997H31.7747ZM33.8899 24.5172H36.0745C37.6117 24.5172 38.5364 23.789 38.5364 22.5869C38.5364 21.4195 37.7042 20.726 36.2825 20.726H33.8899V24.5172ZM33.8899 31.3945H36.4097C38.155 31.3945 39.1259 30.6316 39.1259 29.2215C39.1259 27.8576 38.1319 27.0947 36.3865 27.0947H33.8899V31.3945Z" fill="white" />
-                                    <path d="M25.0462 34.6756C23.7485 34.6756 22.9878 34.1422 22.9878 33.199V24.6564C22.9878 23.7132 23.7485 23.1798 25.0462 23.1798C26.3439 23.1798 27.0935 23.7132 27.0935 24.6564V33.199C27.0935 34.1422 26.3439 34.6756 25.0462 34.6756Z" fill="white" />
-                                    <path d="M9.58234 34.3997C8.31091 34.3997 7.46714 33.6599 7.46714 32.5041C7.46714 31.9262 7.64052 31.4754 8.05662 30.9321L15.3963 21.2346V21.1421H9.27026C8.13753 21.1421 7.38623 20.5179 7.38623 19.4314C7.38623 18.3449 8.12597 17.7208 9.27026 17.7208H18.2512C19.5573 17.7208 20.378 18.4836 20.378 19.6973C20.378 20.3561 20.0774 20.7838 19.7538 21.223L12.4835 30.8859V30.9784H18.9678C20.1121 30.9784 20.8519 31.6025 20.8519 32.689C20.8519 33.7755 20.089 34.3997 18.9678 34.3997H9.58234Z" fill="white" />
-                                    <circle cx="25.0406" cy="19.4847" r="2.05284" fill="white" />
-                                </svg>
-                            </div>
-
-                            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-gray-400 text-sm">
-                                <p>Copyright 2025 Zibbo Energy Co. Ltd.</p>
-                                <div className="flex space-x-4">
-                                    <span>Powered By ?</span>
-                                    <a href="#" className="hover:text-white transition">Sitemap</a>
-                                    <a href="#" className="hover:text-white transition">Privacy Policy</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }

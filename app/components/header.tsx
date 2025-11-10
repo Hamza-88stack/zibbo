@@ -1,4 +1,4 @@
-  'use client'
+'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -29,13 +29,13 @@ export default function Header() {
                         <Link href="/news" className="hover:text-blue-400 transition">News</Link>
                         <Link href="/blog" className="hover:text-blue-400 transition">Blog</Link>
                         <Link href="/about" className="hover:text-blue-400 transition">About Us</Link>
-                        <button className="bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white px-6 py-2 rounded-full font-semibold hover:bg-cyan-300 transition">
+                        <Link href="/contact" className="bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white px-6 py-2 rounded-full font-semibold hover:bg-cyan-300 transition">
                             Contact Us
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Hamburger Menu Button */}
-                    <button 
+                    <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition"
                         aria-label="Toggle menu"
@@ -58,47 +58,28 @@ export default function Header() {
                 {isMenuOpen && (
                     <div className="md:hidden mt-4 pb-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-lg">
                         <div className="flex flex-col space-y-3 p-4">
-                            <Link 
-                                href="/products" 
+                            <Link
+                                href="/products"
                                 className="text-black hover:text-blue-400 transition py-2 px-4 rounded-lg hover:bg-gray-100 font-semibold"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Product
                             </Link>
-                            <Link 
-                                href="/case-studies" 
-                                className="text-black hover:text-blue-400 transition py-2 px-4 rounded-lg hover:bg-gray-100"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                Case Studies
-                            </Link>
-                            <Link 
-                                href="/news" 
-                                className="text-black hover:text-blue-400 transition py-2 px-4 rounded-lg hover:bg-gray-100"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                News
-                            </Link>
-                            <Link 
-                                href="/blog" 
-                                className="text-black hover:text-blue-400 transition py-2 px-4 rounded-lg hover:bg-gray-100"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                Blog
-                            </Link>
-                            <Link 
-                                href="/about" 
+
+                            <Link
+                                href="/about"
                                 className="text-black hover:text-blue-400 transition py-2 px-4 rounded-lg hover:bg-gray-100"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 About Us
                             </Link>
-                            <button 
+                            <Link
+                                href="/contact"
                                 className="bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition text-center"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Contact Us
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 )}

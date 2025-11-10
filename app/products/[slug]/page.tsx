@@ -56,22 +56,32 @@ import Footer from '@/app/components/footer';
 
 // All products data
 const allProducts = [
-    { id: 1, name: "15KWH LiFePO4 Phosphate Rack Mountable Battery", slug: "15kwh-lifepo4-rack-mountable", type: "Cabinet Type", specs: "15.36KWH Grade A LiFePO4 Cell 51.2V 300Ah", category: "Rack Mount", image: Img15kwhRack, featured: false },
-    { id: 2, name: "48V 100AH LiFePO4 Phosphate Rack Mountable Battery", slug: "48v-100ah-rack-mountable", type: "Cabinet Type", specs: "4.8KWH Grade A LiFePO4 Cell 48V 100Ah", category: "Rack Mount", image: Img48v100ahRack, featured: false },
-    { id: 3, name: "51.2V 100Ah Rack Mount Battery", slug: "51-2v-100ah-rack-mount", type: "Cabinet Type", specs: "5.12KWH Grade A LiFePO4 Cell 51.2V 100Ah", category: "Rack Mount", image: Img51v100ahRack, featured: false },
-    { id: 4, name: "51.2V 20kw Rack Energy Storage System", slug: "51-2v-20kw-rack-energy", type: "Cabinet Type", specs: "20.48KWH Grade A LiFePO4 Cell 51.2V 400Ah", category: "Rack Mount", image: Img51v20kwRack, featured: false },
-    { id: 5, name: "48V 100Ah Rackmount Battery", slug: "48v-100ah-rackmount", type: "Cabinet Type", specs: "4.8KWH Grade A LiFePO4 Cell 48V 100Ah", category: "Rack Mount", image: Img48v100ahRackmount, featured: false },
-    { id: 6, name: "Photovoltaic Inverter Energy Storage Battery", slug: "photovoltaic-inverter-storage", type: "Cabinet Type", specs: "19.2KWH Grade A LiFePO4 Cell 192V 100Ah", category: "Rack Mount", image: ImgPhotovoltaic, featured: false },
-    { id: 7, name: "51.2V 200AH Vertical Storage Battery", slug: "51-2v-200ah-vertical", type: "Ground Type", specs: "10.24KWH Grade A LiFePO4 Cell 51.2V 200Ah", category: "Ground Type", image: Img51v200ahVertical, featured: false },
-    { id: 8, name: "Solar 100ah 51.2V 48V 5kwh Smart Home Energy Storage Powerwall Lithium Battery", slug: "solar-100ah-powerwall", type: "Wall-mounted", specs: "5.12KWH Grade A LiFePO4 Cell 51.2V 100Ah", category: "Wall Mounted", image: ImgSolar100ahWall, featured: false },
+    { 
+        id: 1, 
+        name: "15KWH LiFePO4 Phosphate Rack Mountable Battery", 
+        slug: "15kwh-lifepo4-rack-mountable", 
+        type: "Cabinet Type", 
+        specs: "15.36KWH Grade A LiFePO4 Cell 51.2V 300Ah", 
+        category: "Rack Mount", 
+        image: Img15kwhRack, 
+        featured: false,
+        description: "ZBPOWER offers Rack Mounted lithium iron phosphate batteries in 10 kWh, 15 kWh, 20 kWh, and 25 kWh capacities, allowing you to store enough solar energy and power your home with compatibility with most of the inverters on the market, and dramatically reduce your electric bill."
+    },
+    { id: 2, name: "48V 100AH LiFePO4 Phosphate Rack Mountable Battery", slug: "48v-100ah-rack-mountable", type: "Cabinet Type", specs: "4.8KWH Grade A LiFePO4 Cell 48V 100Ah", category: "Rack Mount", image: Img48v100ahRack, featured: false, description: "ZBPOWER 48V 100AH is a 4.8kwh rack mounted low-voltage lithium iron phosphate battery that is compatible with most inverters on the market. You have the flexibility to expand your power capacity without limit. It enables you to meet growing energy demands and ensure an uninterrupted supply of power to your equipment or system." },
+    { id: 3, name: "51.2V 100Ah Rack Mount Battery", slug: "51-2v-100ah-rack-mount", type: "Cabinet Type", specs: "5.12KWH Grade A LiFePO4 Cell 51.2V 100Ah", category: "Rack Mount", image: Img51v100ahRack, featured: false, description: "ZBPOWER 51.2V 100AH is a lithium iron phosphate lithium-ion battery with a capacity of 5.12kwh and a low voltage of 100Ah, which is compatible with most of the inverters on the market. It is mainly used for home or outdoor PV energy storage." },
+    { id: 4, name: "51.2V 20kw Rack Energy Storage System", slug: "51-2v-20kw-rack-energy", type: "Cabinet Type", specs: "20.48KWH Grade A LiFePO4 Cell 51.2V 400Ah", category: "Rack Mount", image: Img51v20kwRack, featured: false, description: "ZBPOWER 51.2V 400AH is a lithium iron phosphate lithium-ion battery with a capacity of 20.48kwh, which is compatible with most of the inverters on the market. It is mainly used for home or outdoor PV energy storage." },
+    { id: 5, name: "48V 100Ah Rackmount Battery", slug: "48v-100ah-rackmount", type: "Cabinet Type", specs: "4.8KWH Grade A LiFePO4 Cell 48V 100Ah", category: "Rack Mount", image: Img48v100ahRackmount, featured: false, description: "ZBPOWER 48V 100AH is a 4.8 kWh rack mounted low voltage lithium iron phosphate battery, compatible with most inverters on the market and supports up to 15 battery modules in parallel. The stackable module architecture allows users to easily expand capacity by adding more battery cells, ensuring flexibility and scalability for home needs." },
+    { id: 6, name: "Photovoltaic Inverter Energy Storage Battery", slug: "photovoltaic-inverter-storage", type: "Cabinet Type", specs: "19.2KWH Grade A LiFePO4 Cell 192V 100Ah", category: "Rack Mount", image: ImgPhotovoltaic, featured: false, description: "The ZBPOWER 192V 100AH is an off-grid high voltage lithium iron phosphate battery with a capacity of 19kwh compatible with most inverters on the market. It is mainly used for home or outdoor PV energy storage." },
+    { id: 7, name: "51.2V 200AH Vertical Storage Battery", slug: "51-2v-200ah-vertical", type: "Ground Type", specs: "10.24KWH Grade A LiFePO4 Cell 51.2V 200Ah", category: "Ground Type", image: Img51v200ahVertical, featured: false, description: "ZBPOWER 51.2V 200AH Vertical Energy Storage Battery Module adopts an upright structure, which is convenient for users to install and maintain, and at the same time has the advantages of occupying a small space, beautiful and generous, providing stable and reliable power supply for home electricity, industrial production, and outdoor activities." },
+    { id: 8, name: "Solar 100ah 51.2V 48V 5kwh Smart Home Energy Storage Powerwall Lithium Battery", slug: "solar-100ah-powerwall", type: "Wall-mounted", specs: "5.12KWH Grade A LiFePO4 Cell 51.2V 100Ah", category: "Wall Mounted", image: ImgSolar100ahWall, featured: false, description: "This wall-mounted lithium battery has the advantages of high efficiency, energy saving, environmental protection and long life. Its compact design is easy to install, can be easily hung on the wall, saving indoor space. The high-quality battery cell and intelligent management system ensure stability and safety." },
     { id: 9, name: "3U Cabinet Type Energy Storage Battery 51.2V 5KWH~30KWH", slug: "3u-cabinet-energy-storage", type: "3U STACKED ENERGY STORAGE LiFePO4 Battery", specs: "51.2V 100Ah 2.5-30KWH", category: "Stacked Type", image: Img3uCabinet, featured: false },
-    { id: 10, name: "Powerwall Lifepo4 Battery 100Ah 48V", slug: "powerwall-100ah-48v", type: "Wall-mounted", specs: "5.00 kWh DOU Grade A LiFePO4 Cell 10 Years Design Life 6000 Times Life Cycle", category: "Wall Mounted", image: ImgPowerwall48v, featured: false },
-    { id: 11, name: "51.2V 300AH Industrial Energy Storage With LCD Display", slug: "51-2v-300ah-industrial", type: "Cabinet Type", specs: "51.2V 300Ah", category: "Industrial", image: Img51v300ahIndustrial, featured: false },
-    { id: 12, name: "25KWH LiFePO4 Phosphate Rack Mountable Battery", slug: "25kwh-rack-mountable", type: "Cabinet Type", specs: "25.6KWH Grade A LiFePO4 Cell 51.2V 500Ah", category: "Rack Mount", image: Img25kwhRack, featured: false },
-    { id: 13, name: "48V 100AH Wall Mount Battery", slug: "48v-100ah-wall-mount", type: "Wall-mounted", specs: "4.8KWH Grade A LiFePO4 Cell 48V 100Ah", category: "Wall Mounted", image: Img48v100ahWall, featured: false },
-    { id: 14, name: "51.2V 200AH Stacked Solar Battery", slug: "51-2v-200ah-stacked-solar", type: "Stacked Type", specs: "51.2V 200Ah", category: "Stacked Type", image: Img51v200ahStacked, featured: false },
-    { id: 15, name: "51.2V 300AH LiFePO4 Phosphate Rack Mountable Battery", slug: "51-2v-300ah-rack", type: "Cabinet Type", specs: "15.36KWH Grade A LiFePO4 Cell 51.2V 300Ah", category: "Rack Mount", image: Img51v300ahRack, featured: false },
-    { id: 16, name: "48V 50AH Residential Battery", slug: "48v-50ah-residential", type: "Wall-mounted", specs: "48V 50Ah", category: "Residential", image: Img48v50ahResidential, featured: false },
+    { id: 10, name: "Powerwall Lifepo4 Battery 100Ah 48V", slug: "powerwall-100ah-48v", type: "Wall-mounted", specs: "5.00 kWh DOU Grade A LiFePO4 Cell 10 Years Design Life 6000 Times Life Cycle", category: "Wall Mounted", image: ImgPowerwall48v, featured: false, description: "The 5kwh lithium iron phosphate battery pack is composed of 3.2V 100Ah 16S1P cell. High-quality quality, support customized logo, professional technical team can customize solutions according to customer requirements. Supports up to 16 parallel machines, can be expanded to 80kwh, compatible with many brands of inverters." },
+    { id: 11, name: "51.2V 300AH Industrial Energy Storage With LCD Display", slug: "51-2v-300ah-industrial", type: "Cabinet Type", specs: "51.2V 300Ah", category: "Industrial", image: Img51v300ahIndustrial, featured: false, description: "ZBPOWER 51.2V 300AH Vertical Energy Storage Battery Module adopts an upright structure, convenient for installation and maintenance. Compatible with many top brand inverters, cycle life >6000 cycles up to 15 years, can be connected in parallel to increase battery capacity with RS232, RS485, CAN communication interface." },
+    { id: 12, name: "25KWH LiFePO4 Phosphate Rack Mountable Battery", slug: "25kwh-rack-mountable", type: "Cabinet Type", specs: "25.6KWH Grade A LiFePO4 Cell 51.2V 500Ah", category: "Rack Mount", image: Img25kwhRack, featured: false, description: "ZBPOWER offers Rack Mounted lithium iron phosphate batteries in 10 kWh, 15 kWh, 20 kWh, and 25 kWh capacities, allowing you to store enough solar energy and power your home with compatibility with most of the inverters on the market, and dramatically reduce your electric bill." },
+    { id: 13, name: "48V 100AH Wall Mount Battery", slug: "48v-100ah-wall-mount", type: "Wall-mounted", specs: "4.8KWH Grade A LiFePO4 Cell 48V 100Ah", category: "Wall Mounted", image: Img48v100ahWall, featured: false, description: "ZBPOWER 48V 100AH wall-mounted energy storage is designed for small home energy storage systems. Built-in BMS management system allows users to monitor the status of the energy storage system in real time, and better manage and control the system. The system can also increase capacity to meet electricity demand." },
+    { id: 14, name: "51.2V 200AH Stacked Solar Battery", slug: "51-2v-200ah-stacked-solar", type: "Stacked Type", specs: "51.2V 200Ah", category: "Stacked Type", image: Img51v200ahStacked, featured: false, description: "The integrated design of battery module and inverter is beautiful and corrosion-resistant, adapting to various environments, occupying less space. Can be directly connected to solar PV panels for charging and discharging. Optional WIFI connectivity and LCD for real-time battery status viewing through mobile APP." },
+    { id: 15, name: "51.2V 300AH LiFePO4 Phosphate Rack Mountable Battery", slug: "51-2v-300ah-rack", type: "Cabinet Type", specs: "15.36KWH Grade A LiFePO4 Cell 51.2V 300Ah", category: "Rack Mount", image: Img51v300ahRack, featured: false, description: "ZBPOWER 51.2V 300AH is a lithium iron phosphate battery with 15.36kwh capacity, ground-type design with rotating wheels for easy movement. Compatible with most inverters on the market. Can be used in motorhomes, solar energy systems, residential energy storage, off-grid settings, and more." },
+    { id: 16, name: "48V 50AH Residential Battery", slug: "48v-50ah-residential", type: "Wall-mounted", specs: "48V 50Ah", category: "Residential", image: Img48v50ahResidential, featured: false, description: "ZBPOWER 48V 50Ah Residential Standby Battery is a split household energy storage battery with wall-mounted design, which can be installed on both indoor and outdoor walls, effectively saving house footprint. High performance charging and discharging, long life with 6000+ cycles, eco-friendly and reliable." },
     { id: 17, name: "48V 200AH Residential Solar Battery", slug: "48v-200ah-residential-solar", type: "Wall-mounted", specs: "9.6KWH Grade A LiFePO4 Cell 48V 200Ah", category: "Residential", image: Img48v200ahResidential, featured: false },
     { id: 18, name: "51.2V 100Ah Energy Storage System", slug: "51-2v-100ah-energy-storage", type: "Wall-mounted", specs: "51.2V 100Ah", category: "Energy Storage", image: Img51v100ahEnergy, featured: false },
     { id: 19, name: "51.2V 200AH Stacked Energy Storage", slug: "51-2v-200ah-stacked-storage", type: "ALL-IN-ONE", specs: "51.2V 200Ah Grade A LiFePO4 Cell 5KW Off-grid Inverter 10.2kwh Lithium Battery", category: "All-in-One", image: Img51v200ahStackedStorage, featured: false },
@@ -144,7 +154,7 @@ export default function ProductDetailPage() {
 
 
             {/* Hero Section */}
-            <section className="relative min-h-screen overflow-hidden">
+            <section className="relative min-h-[650px] sm:min-h-[750px] md:min-h-[850px] lg:min-h-screen overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 ">
                     <div className="absolute inset-0 ">
@@ -158,20 +168,33 @@ export default function ProductDetailPage() {
                 <div className="absolute top-20 left-10 w-20 h-20 bg-white/20 rounded-full blur-xl"></div>
                 <div className="absolute bottom-20 right-20 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
 
-                <div className="absolute inset-0 flex items-center">
-                    <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-                            <div className="text-white z-10 bg-white/20 rounded-2xl p-4 sm:p-6">
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">{product.name}</h1>
-                                <p className="text-xl sm:text-2xl mb-2 sm:mb-3 font-semibold">{product.type}</p>
-                                <p className="text-white/90 mb-6 sm:mb-8 max-w-lg leading-relaxed text-sm sm:text-base md:text-lg">
+                <div className="absolute inset-0 flex items-center py-8 sm:py-12 md:py-16">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
+                            <div className="text-white z-10 bg-white/20 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12">
+                                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 leading-tight">{product.name}</h1>
+                                <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 font-semibold">{product.type}</p>
+                                <p className="text-white/90 mb-3 sm:mb-4 max-w-2xl leading-relaxed text-sm sm:text-base md:text-lg">
                                     {product.specs}
                                 </p>
-                                <button className="bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-gray-100 transition font-semibold text-base sm:text-lg shadow-lg">
+                                {product.description && (
+                                    <p className="text-white/85 mb-6 sm:mb-8 md:mb-10 max-w-2xl leading-relaxed text-sm sm:text-base md:text-lg">
+                                        {product.description}
+                                    </p>
+                                )}
+                                <button className="bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white px-8 sm:px-10 md:px-12 py-3 sm:py-4 md:py-5 rounded-full hover:opacity-90 transition-all duration-300 font-semibold text-sm sm:text-base md:text-lg shadow-xl hover:shadow-2xl w-full sm:w-auto">
                                     Product Inquiry →
                                 </button>
                             </div>
-                            <div className="relative h-[200px] flex items-center justify-center">
+                            <div className="relative h-[280px] sm:h-[380px] md:h-[450px] lg:h-[500px] flex items-center justify-center">
+                                <div className="relative w-full h-full">
+                                    <Image 
+                                        src={product.image} 
+                                        alt={product.name}
+                                        className="object-contain w-full h-full drop-shadow-2xl"
+                                        priority
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -179,10 +202,10 @@ export default function ProductDetailPage() {
             </section>
 
             {/* Product Features */}
-            <section className="py-10 sm:py-12 md:py-16 bg-gray-50">
-                <div className="container mx-auto px-4 sm:px-6">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12 text-black">Product Features</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+            <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 sm:mb-12 md:mb-16 text-black">Product Features</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
                         <FeatureCard
                             title="Modular Design"
                             description="Flexible expansion with stackable modules for customized capacity"
@@ -204,16 +227,16 @@ export default function ProductDetailPage() {
             </section>
 
             {/* Technical Specifications */}
-            <section className="py-10 sm:py-12 md:py-16 bg-white">
-                <div className="container mx-auto px-4 sm:px-6">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12 text-black">Technical Specifications</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center max-w-6xl mx-auto">
-                        <div className="relative h-[250px] sm:h-[300px] md:h-[400px] flex items-center justify-center bg-gray-50 rounded-2xl">
+            <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 sm:mb-12 md:mb-16 text-black">Technical Specifications</h2>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+                        <div className="relative h-[280px] sm:h-[350px] md:h-[420px] lg:h-[480px] flex items-center justify-center bg-gray-50 rounded-2xl p-6 sm:p-8">
                             <div className="text-center text-gray-400">
                                 <Image src={product.image} alt={product.name} width={300} height={400} className="object-contain" />
                             </div>
                         </div>
-                        <div className="space-y-3 sm:space-y-4 text-black">
+                        <div className="space-y-4 sm:space-y-5 md:space-y-6 text-black">
                             <SpecRow label="Product Name" value={product.name} />
                             <SpecRow label="Product Type" value={product.type} />
                             <SpecRow label="Category" value={product.category} />
@@ -222,7 +245,7 @@ export default function ProductDetailPage() {
                             <SpecRow label="Cycle life" value="6000+ Cycles" />
                             <SpecRow label="Protection Level" value="IP65" />
                             <SpecRow label="Warranty" value="10 Years" />
-                            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
+                            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 pt-6 sm:pt-8">
                                 <button className="bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white px-6 py-3 rounded-full hover:opacity-90 transition font-semibold text-sm sm:text-base">
                                     Technical Datasheet →
                                 </button>
@@ -236,21 +259,21 @@ export default function ProductDetailPage() {
             </section>
 
             {/* Related Products */}
-            <section className="py-10 sm:py-12 md:py-16 bg-white">
-                <div className="container mx-auto px-4 sm:px-6">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12 text-black">Related Products</h2>
+            <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 sm:mb-12 md:mb-16 text-black">Related Products</h2>
                     <div className="relative">
                         {relatedProducts.length > 0 ? (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-black gap-4 sm:gap-6 md:gap-8">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-black gap-6 sm:gap-8 md:gap-10">
                                 {relatedProducts.map((relatedProduct) => (
                                     <Link key={relatedProduct.id} href={`/products/${relatedProduct.slug}`}>
-                                        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer">
-                                            <div className="h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                                        <div className="bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100 hover:border-blue-200">
+                                            <div className="h-52 sm:h-56 md:h-60 bg-gray-100 rounded-xl mb-5 sm:mb-6 flex items-center justify-center p-4">
                                                 <Image src={relatedProduct.image} alt={relatedProduct.name} width={200} height={200} className="object-contain" />
                                             </div>
-                                            <h3 className="font-bold mb-2">{relatedProduct.name}</h3>
-                                            <p className="text-sm text-gray-600 mb-4">{relatedProduct.specs}</p>
-                                            <button className="w-full bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white py-2 rounded-full text-sm hover:opacity-90">
+                                            <h3 className="font-bold mb-3 text-base sm:text-lg md:text-xl leading-snug">{relatedProduct.name}</h3>
+                                            <p className="text-sm sm:text-base text-gray-600 mb-5 sm:mb-6 leading-relaxed">{relatedProduct.specs}</p>
+                                            <button className="w-full bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-semibold hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-lg">
                                                 View Details
                                             </button>
                                         </div>
@@ -265,24 +288,24 @@ export default function ProductDetailPage() {
             </section>
 
             {/* Typical Case */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-4xl font-bold text-center mb-12 text-black">Typical Case</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-gray-50 rounded-2xl overflow-hidden max-w-6xl mx-auto shadow-lg">
-                        <div className="h-full bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center p-12">
-                            <Image src={product.image} alt={product.name} width={300} height={400} />
+            <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 sm:mb-12 md:mb-16 text-black">Typical Case</h2>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center bg-white rounded-3xl overflow-hidden max-w-6xl mx-auto shadow-xl">
+                        <div className="h-72 sm:h-80 md:h-96 lg:h-full bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center p-8 sm:p-10 md:p-12 lg:p-16">
+                            <Image src={product.image} alt={product.name} width={300} height={400} className="w-full h-full object-contain" />
                         </div>
-                        <div className="p-8">
-                            <h3 className="text-2xl font-bold text-black mb-4">
+                        <div className="p-6 sm:p-8 md:p-10 lg:p-12">
+                            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-5 md:mb-6">
                                 {product.category} Installation Project
                             </h3>
-                            <div className="space-y-2 text-black mb-6">
+                            <div className="space-y-3 sm:space-y-4 text-black mb-6 sm:mb-8">
                                 <InfoRow label="Product" value={product.name} />
                                 <InfoRow label="Type" value={product.type} />
                                 <InfoRow label="Category" value={product.category} />
                                 <InfoRow label="Application" value="Residential & Commercial" />
                             </div>
-                            <button className="bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white px-6 py-3 rounded-full hover:opacity-90 transition">
+                            <button className="bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full hover:opacity-90 transition-all duration-300 font-semibold text-sm sm:text-base md:text-lg shadow-lg hover:shadow-xl w-full sm:w-auto">
                                 Read more →
                             </button>
                         </div>
@@ -291,98 +314,101 @@ export default function ProductDetailPage() {
             </section>
 
             {/* Contact Form */}
-            <section className="py-10 sm:py-12 md:py-16 bg-gray-50">
-                <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12 text-black">Product Inquiry</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center bg-gray-50 rounded-2xl overflow-hidden max-w-6xl mx-auto shadow-lg">
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 p-4 sm:p-6 md:p-8 rounded-2xl items-center justify-center p-12">
-                            <Image src={product.image} alt={product.name} width={300} height={400} />
+            <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 sm:mb-12 md:mb-16 text-black">Product Inquiry</h2>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center bg-gray-50 rounded-3xl overflow-hidden max-w-6xl mx-auto shadow-xl">
+                        <div className="bg-gradient-to-br from-blue-50 to-green-50 p-8 sm:p-10 md:p-12 lg:p-16 flex items-center justify-center min-h-[300px] sm:min-h-[400px]">
+                            <Image src={product.image} alt={product.name} width={300} height={400} className="w-full h-full object-contain" />
                         </div>
-                        <div className="p-8">
-                            <h3 className="text-2xl font-bold text-black mb-4">
-                                {product.category} Installation Project
+                        <div className="p-6 sm:p-8 md:p-10 lg:p-12">
+                            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-5 md:mb-6">
+                                Get a Quote
                             </h3>
-                            <div className="space-y-3 sm:space-y-4 text-black mb-6">
+                            <div className="space-y-3 sm:space-y-4 text-black mb-6 sm:mb-8">
                                 <InfoRow label="Product" value={product.name} />
                                 <InfoRow label="Type" value={product.type} />
                                 <InfoRow label="Category" value={product.category} />
-                                <InfoRow label="Application" value="Residential & Commercial" />
                             </div>
                             <form>
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                                     <input
                                         type="text"
                                         name="name"
                                         placeholder="Name *"
-                                        className="border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="border-2 border-gray-300 rounded-xl px-5 py-3.5 text-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base"
                                     />
                                     <input
                                         type="text"
                                         name="product"
                                         value={product.name}
                                         readOnly
-                                        className="border border-gray-300 rounded-lg px-4 py-3 text-black bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="border border-gray-300 rounded-lg px-4 py-3 text-black bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
                                     />
+                                </div>
+                                <div className="grid grid-cols-1 gap-4 sm:gap-5">
                                     <select
                                         name="type"
-                                        className="border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="border-2 border-gray-300 rounded-xl px-5 py-3.5 text-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base"
                                     >
-                                        <option value="">Customer Type</option>
+                                        <option value="">Customer Type *</option>
+                                        <option value="residential">Residential</option>
+                                        <option value="commercial">Commercial</option>
                                         <option value="dealer">Dealer</option>
                                         <option value="installer">Installer</option>
                                     </select>
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
                                     <input
                                         type="text"
                                         name="country"
                                         placeholder="Country"
-                                        className="border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="border-2 border-gray-300 rounded-xl px-5 py-3.5 text-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base"
                                     />
                                     <input
                                         type="text"
                                         name="city"
                                         placeholder="City"
-                                        className="border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="border-2 border-gray-300 rounded-xl px-5 py-3.5 text-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base"
                                     />
                                     <input
                                         type="text"
                                         name="company"
                                         placeholder="Company Name"
-                                        className="border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="border-2 border-gray-300 rounded-xl px-5 py-3.5 text-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base"
                                     />
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                                     <input
                                         type="tel"
                                         name="phone"
                                         placeholder="Phone *"
-                                        className="border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="border-2 border-gray-300 rounded-xl px-5 py-3.5 text-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base"
                                     />
                                     <input
                                         type="email"
                                         name="email"
                                         placeholder="Email *"
-                                        className="border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="border-2 border-gray-300 rounded-xl px-5 py-3.5 text-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base"
                                     />
                                 </div>
                                 <textarea
                                     name="message"
                                     placeholder="Message"
-                                    rows={4}
-                                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    rows={5}
+                                    className="w-full border-2 border-gray-300 rounded-xl px-5 py-3.5 text-black focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base resize-none"
                                 />
-                                <div className="flex items-center space-x-2">
-                                    <input type="checkbox" id="verification" className="w-4 h-4" />
-                                    <label htmlFor="verification" className="text-sm text-black">
+                                <div className="flex items-center space-x-3">
+                                    <input type="checkbox" id="verification" className="w-5 h-5 rounded border-gray-300 text-blue-500 focus:ring-2 focus:ring-blue-500" />
+                                    <label htmlFor="verification" className="text-sm sm:text-base text-black leading-relaxed">
                                         I am a <span className="text-[#3DE15C] font-semibold">Human</span> and I am interested in <span className="text-[#2D8DFD] font-semibold">products</span>
                                     </label>
                                 </div>
                                 <button
                                     onClick={handleSubmit}
-                                    className="w-full bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white py-3 rounded-full hover:opacity-90 transition font-semibold text-sm sm:text-base"
+                                    className="w-full bg-gradient-to-r from-[#2D8DFD] to-[#3DE15C] text-white py-4 sm:py-5 rounded-full hover:opacity-90 transition-all duration-300 font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl"
                                 >
-                                    Submit
+                                    Submit Inquiry
                                 </button>
                             </form>
                         </div>
@@ -398,21 +424,21 @@ export default function ProductDetailPage() {
 
 function FeatureCard({ title, description }: { title: string; description: string }) {
     return (
-        <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 text-center border border-gray-100">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4 bg-gradient-to-br from-[#2D8DFD] to-[#3DE15C] rounded-full flex items-center justify-center">
-                <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-white rounded-full"></div>
+        <div className="bg-white p-6 sm:p-7 md:p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center border border-gray-100 hover:border-blue-200">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 mx-auto mb-4 sm:mb-5 md:mb-6 bg-gradient-to-br from-[#2D8DFD] to-[#3DE15C] rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-white rounded-full"></div>
             </div>
-            <h3 className="font-bold mb-2 text-black text-base sm:text-lg">{title}</h3>
-            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{description}</p>
+            <h3 className="font-bold mb-3 sm:mb-4 text-black text-lg sm:text-xl md:text-2xl">{title}</h3>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">{description}</p>
         </div>
     );
 }
 
 function SpecRow({ label, value }: { label: string; value: string }) {
     return (
-        <div className="flex flex-col sm:flex-row sm:justify-between py-2 border-b border-gray-200 gap-1 sm:gap-0">
-            <span className="text-gray-600 text-sm sm:text-base">{label}</span>
-            <span className="font-semibold text-sm sm:text-base break-words">{value}</span>
+        <div className="flex flex-col sm:flex-row sm:justify-between py-3 sm:py-4 border-b border-gray-200 gap-2 sm:gap-4">
+            <span className="text-gray-600 text-sm sm:text-base md:text-lg font-medium">{label}</span>
+            <span className="font-semibold text-sm sm:text-base md:text-lg break-words text-black">{value}</span>
         </div>
     );
 }
@@ -434,9 +460,9 @@ function ProductCard({ name, description }: { name: string; description: string 
 
 function InfoRow({ label, value }: { label: string; value: string }) {
     return (
-        <div className="flex items-start space-x-2">
-            <Check className="w-4 h-4 text-[#3DE15C] flex-shrink-0 mt-0.5" />
-            <span className="text-xs sm:text-sm break-words">
+        <div className="flex items-start space-x-3">
+            <Check className="w-5 h-5 sm:w-6 sm:h-6 text-[#3DE15C] flex-shrink-0 mt-1" />
+            <span className="text-sm sm:text-base md:text-lg break-words leading-relaxed">
                 <span className="font-semibold">{label}:</span> {value}
             </span>
         </div>

@@ -223,11 +223,11 @@ export default function AboutPage() {
         <div className=" bg-gray-900 text-white">
             {/* Navigation - Same as another page */}
             <div className="min-h-screen">
+                      <Header/>
 
 
                 {/* Hero Section */}
                 <section className="relative pt-20 sm:pt-24 md:pt-32 min-h-screen pb-10 sm:pb-16 md:pb-20 px-4 sm:px-6 [background:linear-gradient(to_bottom,#A0D1FF_1%,#fffff1_100%)]">
-                      <Header/>
                     <div className="max-w-7xl mx-auto text-center">
                         <h1 className=" text-5xl lg:text-6xl text-[#2E90F9] font-bold mb-4 sm:mb-6">About ZIBBO</h1>
                         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-black mb-8 sm:mb-12 max-w-4xl mx-auto px-4">

@@ -94,9 +94,13 @@ export default function Footer() {
                             <div className="space-y-3">
                                 <h3 className="text-white font-semibold">Contact Us:</h3>
                                 <div className="text-gray-300 text-sm">
-                                    <p><span className="font-medium">Email:</span> Email@gmail.com</p>
+                                    <p><span className="font-medium">Email:</span> sales@zibbopower.pk
+</p>
                                     <p><span className="font-medium">Sales Call:</span> 03208889719</p>
-                                    <p><span className="font-medium">Company Address:</span> Ghazi road Lhr</p>
+                                    <p><span className="font-medium">Company Address:</span> 67-K Commercial Phase-1 Ghazi
+Road, DHA Lahore.</p>
+
+
                                 </div>
                             </div>
                         </div>
